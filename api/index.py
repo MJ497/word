@@ -82,7 +82,6 @@ def leaderboard():
 
 # … add your other Flask routes here (signup/login/dashboard/etc) …
 
-# ─── Vercel Serverless handler ─────────────────────────
-def handler(request, context):
-    # Vercel will pass an ASGI‐style request
-    return app(request.scope, request.receive, request.send)
+if __name__ == "__main__":
+    # for local debugging
+    app.run(debug=True)
